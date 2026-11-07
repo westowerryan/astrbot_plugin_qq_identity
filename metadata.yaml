@@ -1,0 +1,15 @@
+name: astrbot_plugin_qq_identity
+display_name: 只通过QQ号认人
+desc: 只通过QQ号认人。认人只认QQ号，谁是谁全靠后台设置里那张 QQ号-名字 两列映射表，群名片一概不看。
+version: 2.0.2
+author: westowerryan
+plugin_type: normal
+category: 群聊管理
+tags:
+  - 认人
+  - QQ号
+  - 手动登记
+  - 群聊
+support_platforms:
+  - aiocqhttp
+astrbot_version: ">=4.0.0"

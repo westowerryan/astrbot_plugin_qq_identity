@@ -1,0 +1,52 @@
+{
+  "enabled": {
+    "description": "总开关",
+    "hint": "关闭后不再注入任何身份信息",
+    "type": "bool",
+    "default": true
+  },
+  "enable_groups": {
+    "description": "生效群号白名单",
+    "hint": "留空=所有群生效。填群号（每行一个）=只在这些群生效",
+    "type": "list",
+    "default": []
+  },
+  "qq_names": {
+    "description": "QQ号-名字映射表（两列，可分别修改）",
+    "hint": "认人唯一依据。点右上角「添加条目」加一行，QQ号和名字分开填。名字栏里多个名字用逗号隔开。",
+    "type": "template_list",
+    "templates": {
+      "person": {
+        "name": "QQ号-名字",
+        "hint": "一个QQ号一行，名字栏多个名字用逗号隔开",
+        "display_item": "qq",
+        "clipboard_export": {
+          "key": "qq",
+          "value": "name",
+          "take_first": true,
+          "button": "导出到剪切板",
+          "description": "如安装LivingMemory，请粘贴到记忆面板-设置-访问与隔离-记忆访问控制-用户身份别名，复制完重载LivingMemory生效"
+        },
+        "items": {
+          "qq": {
+            "type": "string",
+            "description": "QQ号",
+            "hint": "纯数字QQ号，认人的唯一依据"
+          },
+          "name": {
+            "type": "string",
+            "description": "名字",
+            "hint": "这个QQ号对应的名字，多个名字用逗号隔开，如 浅念,浅浅,小念"
+          }
+        }
+      }
+    },
+    "default": []
+  },
+  "extra_rules": {
+    "description": "额外认人规矩",
+    "hint": "追加到认人铁律后面，自由发挥",
+    "type": "text",
+    "default": ""
+  }
+}
